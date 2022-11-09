@@ -1,32 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
-import { Image } from '../../../../components/atoms';
-import { SectionHeader, CountUpNumber } from '../../../../components/molecules';
+import React from "react";
+import PropTypes from "prop-types";
+import clsx from "clsx";
+import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Typography } from "@material-ui/core";
+import { Image } from "../../../../components/atoms";
+import { SectionHeader, CountUpNumber } from "../../../../components/molecules";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    width: "100%",
   },
   placementGrid: {
-    display: 'flex',
+    display: "flex",
   },
   placementGridItemMiddle: {
     margin: `0 ${theme.spacing(3)}px`,
   },
   coverImage: {
     boxShadow:
-      '25px 60px 125px -25px rgba(80,102,144,.1), 16px 40px 75px -40px rgba(0,0,0,.2)',
+      "25px 60px 125px -25px rgba(80,102,144,.1), 16px 40px 75px -40px rgba(0,0,0,.2)",
     borderRadius: theme.spacing(2),
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       maxWidth: 500,
     },
   },
 }));
 
-const Features = props => {
+const Features = (props) => {
   const { className, ...rest } = props;
   const classes = useStyles();
 
@@ -67,7 +67,11 @@ const Features = props => {
                   <span>
                     Transforming modern
                     <br />
-                    <Typography component="span" variant="inherit" color="primary">
+                    <Typography
+                      component="span"
+                      variant="inherit"
+                      color="primary"
+                    >
                       healthcare
                     </Typography>
                   </span>
@@ -81,17 +85,9 @@ const Features = props => {
             </Grid>
             <Grid item xs={12}>
               <div className={classes.placementGrid}>
-                <div>
-                  <CountUpNumber
-                    end={800}
-                    label="Classifications"
-                    textColor="primary"
-                    suffix="+"
-                  />
-                </div>
                 <div className={classes.placementGridItemMiddle}>
                   <CountUpNumber
-                    end={'98'}
+                    end={"95"}
                     label="Accuracy"
                     textColor="primary"
                     suffix="%"

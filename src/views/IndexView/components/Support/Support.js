@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import {
   useMediaQuery,
   Grid,
@@ -9,16 +9,16 @@ import {
   Typography,
   Avatar,
   colors,
-} from '@material-ui/core';
-import { SectionHeader, IconAlternate } from '../../../../components/molecules';
+} from "@material-ui/core";
+import { SectionHeader, IconAlternate } from "../../../../components/molecules";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   listItemAvatar: {
     minWidth: 28,
   },
   listItem: {
-    [theme.breakpoints.up('sm')]: {
-      justifyContent: 'center',
+    [theme.breakpoints.up("sm")]: {
+      justifyContent: "center",
     },
   },
   galleryMedia: {
@@ -26,28 +26,28 @@ const useStyles = makeStyles(theme => ({
     height: 80,
     marginLeft: theme.spacing(-2),
     border: `3px solid ${theme.palette.background.paper}`,
-    '&:first-child': {
+    "&:first-child": {
       marginLeft: 0,
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: 100,
       height: 100,
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       width: 140,
       height: 140,
     },
   },
 }));
 
-const Contact = props => {
+const Contact = (props) => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
 
   const { items, team } = data;
 
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
@@ -61,8 +61,12 @@ const Contact = props => {
               <>
                 <span>
                   Our support team
-                  <Typography color="secondary" variant="inherit" component="span">
-                    {' '}
+                  <Typography
+                    color="secondary"
+                    variant="inherit"
+                    component="span"
+                  >
+                    {" "}
                     is there to assist you 24/7
                   </Typography>
                 </span>
@@ -94,7 +98,7 @@ const Contact = props => {
             ))}
           </Grid>
         </Grid>
-        <Grid
+        {/* <Grid
           item
           container
           alignItems="center"
@@ -110,7 +114,7 @@ const Contact = props => {
               {...item.authorPhoto}
             />
           ))}
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );

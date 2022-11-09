@@ -1,22 +1,15 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { colors, Divider } from '@material-ui/core';
-import { Section, SectionAlternate } from '../../components/organisms';
-import {
-  Hero,
-  Hub,
-  Partners,
-  Pricings,
-  Reviews,
-  Support,
-} from './components';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { colors, Divider } from "@material-ui/core";
+import { Section, SectionAlternate } from "../../components/organisms";
+import { Hero, Hub, Pricings, Reviews, Support } from "./components";
 
-import { reviews, support, integrations } from './data';
+import { reviews, support, integrations } from "./data";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   pagePaddingTop: {
     paddingTop: theme.spacing(3),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       paddingTop: theme.spacing(5),
     },
   },
@@ -25,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   },
   shape: {
     background: theme.palette.alternate.main,
-    borderBottomRightRadius: '50%',
+    borderBottomRightRadius: "50%",
     borderBottom: `1px solid ${colors.grey[200]}`,
   },
 }));
@@ -39,18 +32,15 @@ const IndexView = () => {
         <Section className={classes.pagePaddingTop}>
           <Hero />
         </Section>
-        <Section className={classes.sectionNoPaddingTop}>
+        {/* <Section className={classes.sectionNoPaddingTop}>
           <Reviews data={reviews} />
-        </Section>
+        </Section> */}
         <Section className={classes.sectionNoPaddingTop}>
           <Hub />
         </Section>
       </div>
       <Section narrow>
         <Support data={support} />
-      </Section>
-      <Section>
-        <Partners data={integrations} />
       </Section>
       <SectionAlternate innerNarrowed>
         <Pricings />

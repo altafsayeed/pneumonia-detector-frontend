@@ -56,9 +56,6 @@ const Hero = (props) => {
               <Button variant="contained" color="primary" size="large">
                 Start now
               </Button>,
-              <Button variant="outlined" color="primary" size="large">
-                Learn more
-              </Button>,
             ]}
             align="left"
             disableGutter

@@ -1,24 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 
-import { useMediaQuery, Grid, Typography, Button } from '@material-ui/core';
-import { Icon } from '../../../../components/atoms';
-import { SectionHeader } from '../../../../components/molecules';
-import { CardPricingStandard } from '../../../../components/organisms';
+import { useMediaQuery, Grid, Typography, Button } from "@material-ui/core";
+import { Icon } from "../../../../components/atoms";
+import { SectionHeader } from "../../../../components/molecules";
+import { CardPricingStandard } from "../../../../components/organisms";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   fontWeight900: {
     fontWeight: 900,
   },
 }));
 
-const Pricings = props => {
+const Pricings = (props) => {
   const { className, ...rest } = props;
   const classes = useStyles();
 
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
@@ -26,7 +26,7 @@ const Pricings = props => {
     <div className={className} {...rest}>
       <SectionHeader
         title="Simple pricing"
-        subtitle="A pay-once license, just for you."
+        subtitle="Just for you."
         data-aos="fade-up"
       />
       <Grid container spacing={isMd ? 4 : 2}>
@@ -36,7 +36,6 @@ const Pricings = props => {
             withShadow
             liftUp
             title="Extended License"
-            subtitle="A pay-once license, just for you"
             priceComponent={
               <div>
                 <Typography
@@ -52,10 +51,10 @@ const Pricings = props => {
               </div>
             }
             features={[
-              'Unlimited classifications',
-              'Flexible, simple license',
-              'Speedy build tooling',
-              '12 months free support',
+              "Unlimited classifications",
+              "Flexible, simple license",
+              "Speedy build tooling",
+              "12 months free support",
             ]}
             featureCheckComponent={
               <Icon
@@ -81,7 +80,6 @@ const Pricings = props => {
             variant="outlined"
             title="Standard License"
             liftUp
-            subtitle="A pay-once license, just for you"
             priceComponent={
               <div>
                 <Typography
@@ -97,10 +95,10 @@ const Pricings = props => {
               </div>
             }
             features={[
-              '400 classifications',
-              'Flexible, simple license',
-              'Speedy build tooling',
-              '6 months free support ',
+              "400 classifications",
+              "Flexible, simple license",
+              "Speedy build tooling",
+              "6 months free support ",
             ]}
             featureCheckComponent={
               <Icon
